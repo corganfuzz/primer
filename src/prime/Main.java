@@ -9,10 +9,12 @@ public class Main {
         private int number;
 
         MyNumber(int number) {
+
             this.number = number;
         }
 
         int getNumber() {
+
             return number;
         }
 
@@ -23,7 +25,8 @@ public class Main {
             this.number = num;
         }
 
-        static boolean[] isPrime(int num) {
+        boolean[] isPrime(int num) {
+
             boolean[] primes = new boolean[num];
 
             for (int i = 0; i < primes.length; i++) {
@@ -66,7 +69,9 @@ public class Main {
             Scanner sc = new Scanner(System.in);
             System.out.print("Enter a number: ");
             int num = sc.nextInt();
-            boolean[] primes = MyNumber.isPrime(num);
+
+            MyNumber theNumber = new MyNumber(num);
+            boolean[] primes = theNumber.isPrime(num);
 
             int occurrences = MyNumber.numberOfPrimes(primes);
             System.out.println(occurrences);
